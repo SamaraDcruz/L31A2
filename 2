@@ -1,0 +1,29 @@
+# Parent Class
+class Person:
+    def __init__(self, name, id_number):
+        self.name = name
+        self.id_number = id_number
+        self.salary = None
+        self.post = None
+
+    def display(self):
+        print("Name:", self.name)
+        print("ID Number:", self.id_number)
+        print("Salary:", self.salary)
+        print("Post:", self.post)
+
+
+# Child Class
+class Employee(Person):
+    def __init__(self, name, id_number, salary, post):
+        # Accessing parent class attributes
+        super().__init__(name, id_number)
+
+        # Child class attributes
+        self.salary = salary
+        self.post = post
+
+
+# Creating object of Employee class
+emp1 = Employee("Samara", 101, 35000, "Team Lead")
+emp2 = Employee("Ranav", 102, 23000, "Software Engineer")
